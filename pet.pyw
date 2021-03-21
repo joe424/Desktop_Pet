@@ -176,6 +176,9 @@ class Pet(QWidget):
             else:
                 self.prev_mouse_x, self.prev_mouse_y, self.velocity_x, self.velocity_y = None, None, None, None
                 self.timer.start(1)
+        
+        if not self.timer.isActive():
+            self.timer.start(1)
 
     # pop up menu when right click
     def contextMenuEvent(self, event):
